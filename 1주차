@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() 
+{
+    int n;
+    scanf("%d", &n);
+
+    int stock_in[100]; 
+    int sold[100];     
+    int stock[100];    
+    int i;
+
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &stock_in[i]);
+    }
+
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &sold[i]);
+    }
+
+    for (i = 0; i < n; i++) 
+    {
+        stock[i] = stock_in[i] - sold[i];
+    }
+
+    int id;
+    scanf("%d", &id);
+    printf("%d\n", stock[id - 1]);
+
+    for (i = 0; i < n; i++) 
+    {
+        printf("%d", stock[i]);
+        if (i < n - 1) 
+        {
+            printf(" ");
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
+}
